@@ -1,14 +1,29 @@
 // Sean Adams Enhancements
-@import "enhancements";
-
-// HRC Custom work here
-@import "main";
-
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
 
+// Import Bootstrap for Sass
+@import "bootstrap";
 // Import custom Bootstrap variables
 @import "bootstrap-variables";
 
-// Import Bootstrap for Sass
-@import "bootstrap";
+
+
+
+
+
+// HRC Custom work here
+@import "main";
+@import "enhancements";
+
+
+
+
+
+
+
+
+
+
+
+

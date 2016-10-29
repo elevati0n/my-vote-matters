@@ -390,14 +390,25 @@ ul.timeline li:active .details {
     margin: 0 auto;
 }
 
-.carousel-control {
+.carousel-control.left {
+    font-size: 8vh;
+    opacity: 0.0;
+}
+
+.carousel-control.right {
+    opacity: 0.0;
+}
+
+.carousel-control.right {
     font-size: 8vh;
 }
+
 
 .carousel-control table {
     height: 100%;
     width: 100%;
 }
+
 
 /* Footer */
 

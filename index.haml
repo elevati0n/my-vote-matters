@@ -31,89 +31,85 @@
 
 
   %body.bgblue.fgwhite
-    .container-fluid#home-header#header
-      .row
+    .container-fluid
+      .row#home-header#header
         .span-12
           %h1 My Vote Matters.
           %h3 Help Make History.
           %span#link
             %a{:href => "/timeline/"} Learn More
             %img{:src => "img/logo.png?v2"}/
-    .container-fluid#photos
-      .row
+      .row#photos
         .span-12
-    .container-fluid#main
-      .container-fluid#camera-popup
-        .row
-          .col-md-6.col-md-offset-3
-            .container-fluid#camera-box
-              .row
-                .span-12#video-wrapper.bgblue.no-display
-                  %video#video.no-display Video stream not available.
-                  %canvas#canvas
-                  #camerabutton-wrapper
-                    %button#camerabutton.btn.btn-default{:type => "button"} Start camera
-                %span#controls
-                  .input-wrapper.no-display
-                    %input.input-message{:name => "message", :placeholder => "#myvotematters because...", :type => "text"}/
-                  #streaming.no-display
-                    %button#startbutton.btn.btn-danger{:type => "button"}
-                      %span.emoji 📷
-                      %span.text Take photo
-                  %span#share-photo.no-display
-                    .button-wrapper
-                      %a.twitter-share-button
-                        %img{:src => "img/twitter.png"}/
-                      %a.fb-share-button
-                        %img{:src => "img/facebook.png"}/
-                      %a.download-button
-                        %img{:src => "img/download.png"}/
-                      %a.cancel-button
-                        %img{:src => "img/error.png"}/
-                  .result.no-display
-                    %span.result-text
-                    %a.cancel-button{:href => "#"}
-                      Reset.
-    %footer.carousel-footer
-      .container-fluid
-        #carousel.carousel.slide{"data-interval" => "5000", "data-ride" => "carousel"}
-          .carousel-inner{:role => "listbox"}
-            #longest.item.active
+      .row#main#camera-popup
+        .col-md-6.col-md-offset-3
+          .row#camera-box
+            .span-12#video-wrapper.bgblue.no-display
+              %video#video.no-display Video stream not available.
+              %canvas#canvas
+              #camerabutton-wrapper
+                %button#camerabutton.btn.btn-default{:type => "button"} Start camera
+            %span#controls
+              .input-wrapper.no-display
+                %input.input-message{:name => "message", :placeholder => "#myvotematters because...", :type => "text"}/
+              #streaming.no-display
+                %button#startbutton.btn.btn-danger{:type => "button"}
+                  %span.emoji 📷
+                  %span.text Take photo
+              %span#share-photo.no-display
+                .button-wrapper
+                  %a.twitter-share-button
+                    %img{:src => "img/twitter.png"}/
+                  %a.fb-share-button
+                    %img{:src => "img/facebook.png"}/
+                  %a.download-button
+                    %img{:src => "img/download.png"}/
+                  %a.cancel-button
+                    %img{:src => "img/error.png"}/
+              .result.no-display
+                %span.result-text
+                %a.cancel-button{:href => "#"}
+                  Reset.
+      %footer
+        .row.carousel-footer
+          .span-12#carousel.carousel.slide{"data-interval" => "5000", "data-ride" => "carousel"}
+            .carousel-inner{:role => "listbox"}
+              #longest.item.active
+                %table
+                  %tr{:valign => "middle"}
+                    %td
+                      Nearly 100 years after women gained the right to vote, we have the ability to elect the first one to the White House.
+              .item
+                %table
+                  %tr{:valign => "middle"}
+                    %td
+                      This comes with enormous gains for women and society as a whole.
+              .item
+                %table
+                  %tr{:valign => "middle"}
+                    %td
+                      Frame this moment in history and share why
+                      %b #myvotematters
+                      with your friends &amp; family.
+            %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"}
               %table
                 %tr{:valign => "middle"}
                   %td
-                    Nearly 100 years after women gained the right to vote, we have the ability to elect the first one to the White House.
-            .item
+                    %span ‹
+            %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"}
               %table
                 %tr{:valign => "middle"}
                   %td
-                    This comes with enormous gains for women and society as a whole.
-            .item
-              %table
-                %tr{:valign => "middle"}
-                  %td
-                    Frame this moment in history and share why
-                    %b #myvotematters
-                    with your friends &amp; family.
-          %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"}
+                    %span ›
+        .row#devprogress-footer
+          .span-12
             %table
               %tr{:valign => "middle"}
                 %td
-                  %span ‹
-          %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"}
-            %table
-              %tr{:valign => "middle"}
-                %td
-                  %span ›
-    %footer#devprogress-footer
-      .container-fluid
-        %table
-          %tr{:valign => "middle"}
-            %td
-              Built by
-              = succeed "." do
-                %a{:href => "https://devprogress.us"} DevProgress
-              = succeed "." do
-                %a{:href => "https://www.gnu.org/licenses/agpl-3.0.en.html"} AGPLv3
-              = succeed "." do
-                %a{:href => "https://www.iwillvote.com/home/"} Commit to vote
+                  Built by
+                  = succeed "." do
+                    %a{:href => "https://devprogress.us"} DevProgress
+                  = succeed "." do
+                    %a{:href => "https://www.gnu.org/licenses/agpl-3.0.en.html"} AGPLv3
+                  = succeed "." do
+                    %a{:href => "https://www.iwillvote.com/home/"} Commit to vote

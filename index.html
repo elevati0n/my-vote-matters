@@ -31,8 +31,8 @@
     </script>
   </head>
   <body class='bgblue fgwhite'>
-    <div class='container-fluid' id='header'>
-      <div class='row'>
+    <div class='container-fluid'>
+      <div class='row' id='header'>
         <div class='span-12'>
           <h1>My Vote Matters.</h1>
           <h3>Help Make History.</h3>
@@ -42,132 +42,124 @@
           </span>
         </div>
       </div>
-    </div>
-    <div class='container-fluid' id='photos'>
-      <div class='row'>
+      <div class='row' id='photos'>
         <div class='span-12'></div>
       </div>
-    </div>
-    <div class='container-fluid' id='main'>
-      <div class='container-fluid' id='camera-popup'>
-        <div class='row'>
-          <div class='col-md-6 col-md-offset-3'>
-            <div class='container-fluid' id='camera-box'>
-              <div class='row'>
-                <div class='span-12 bgblue no-display' id='video-wrapper'>
-                  <video class='no-display' id='video'>Video stream not available.</video>
-                  <canvas id='canvas'></canvas>
-                  <div id='camerabutton-wrapper'>
-                    <button class='btn btn-default' id='camerabutton' type='button'>Start camera</button>
-                  </div>
-                </div>
-                <span id='controls'>
-                  <div class='input-wrapper no-display'>
-                    <input class='input-message' name='message' placeholder='#myvotematters because...' type='text'>
-                  </div>
-                  <div class='no-display' id='streaming'>
-                    <button class='btn btn-danger' id='startbutton' type='button'>
-                      <span class='emoji'>📷</span>
-                      <span class='text'>Take photo</span>
-                    </button>
-                  </div>
-                  <span class='no-display' id='share-photo'>
-                    <div class='button-wrapper'>
-                      <a class='twitter-share-button'>
-                        <img src='img/twitter.png'>
-                      </a>
-                      <a class='fb-share-button'>
-                        <img src='img/facebook.png'>
-                      </a>
-                      <a class='download-button'>
-                        <img src='img/download.png'>
-                      </a>
-                      <a class='cancel-button'>
-                        <img src='img/error.png'>
-                      </a>
-                    </div>
-                  </span>
-                  <div class='result no-display'>
-                    <span class='result-text'></span>
-                    <a class='cancel-button' href='#'>
-                      Reset.
-                    </a>
-                  </div>
-                </span>
+      <div class='row' id='camera-popup'>
+        <div class='col-md-6 col-md-offset-3'>
+          <div class='row' id='camera-box'>
+            <div class='span-12 bgblue no-display' id='video-wrapper'>
+              <video class='no-display' id='video'>Video stream not available.</video>
+              <canvas id='canvas'></canvas>
+              <div id='camerabutton-wrapper'>
+                <button class='btn btn-default' id='camerabutton' type='button'>Start camera</button>
               </div>
             </div>
+            <span id='controls'>
+              <div class='input-wrapper no-display'>
+                <input class='input-message' name='message' placeholder='#myvotematters because...' type='text'>
+              </div>
+              <div class='no-display' id='streaming'>
+                <button class='btn btn-danger' id='startbutton' type='button'>
+                  <span class='emoji'>📷</span>
+                  <span class='text'>Take photo</span>
+                </button>
+              </div>
+              <span class='no-display' id='share-photo'>
+                <div class='button-wrapper'>
+                  <a class='twitter-share-button'>
+                    <img src='img/twitter.png'>
+                  </a>
+                  <a class='fb-share-button'>
+                    <img src='img/facebook.png'>
+                  </a>
+                  <a class='download-button'>
+                    <img src='img/download.png'>
+                  </a>
+                  <a class='cancel-button'>
+                    <img src='img/error.png'>
+                  </a>
+                </div>
+              </span>
+              <div class='result no-display'>
+                <span class='result-text'></span>
+                <a class='cancel-button' href='#'>
+                  Reset.
+                </a>
+              </div>
+            </span>
           </div>
         </div>
       </div>
+      <footer>
+        <div class='row carousel-footer'>
+          <div class='span-12 carousel slide' data-interval='5000' data-ride='carousel' id='carousel'>
+            <div class='carousel-inner' role='listbox'>
+              <div class='item active' id='longest'>
+                <table>
+                  <tr valign='middle'>
+                    <td>
+                      Nearly 100 years after women gained the right to vote, we have the ability to elect the first one to the White House.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class='item'>
+                <table>
+                  <tr valign='middle'>
+                    <td>
+                      This comes with enormous gains for women and society as a whole.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class='item'>
+                <table>
+                  <tr valign='middle'>
+                    <td>
+                      Frame this moment in history and share why
+                      <b>#myvotematters</b>
+                      with your friends &amp; family.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <a class='carousel-control left' data-slide='prev' href='#carousel'>
+              <table>
+                <tr valign='middle'>
+                  <td>
+                    <span>‹</span>
+                  </td>
+                </tr>
+              </table>
+            </a>
+            <a class='carousel-control right' data-slide='next' href='#carousel'>
+              <table>
+                <tr valign='middle'>
+                  <td>
+                    <span>›</span>
+                  </td>
+                </tr>
+              </table>
+            </a>
+          </div>
+        </div>
+        <div class='row' id='devprogress-footer'>
+          <div class='span-12'>
+            <table>
+              <tr valign='middle'>
+                <td>
+                  Built by
+                  <a href='https://devprogress.us'>DevProgress</a>.
+                  <a href='https://www.gnu.org/licenses/agpl-3.0.en.html'>AGPLv3</a>.
+                  <a href='https://www.iwillvote.com/home/'>Commit to vote</a>.
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </footer>
     </div>
-    <footer class='carousel-footer'>
-      <div class='container-fluid'>
-        <div class='carousel slide' data-interval='5000' data-ride='carousel' id='carousel'>
-          <div class='carousel-inner' role='listbox'>
-            <div class='item active' id='longest'>
-              <table>
-                <tr valign='middle'>
-                  <td>
-                    Nearly 100 years after women gained the right to vote, we have the ability to elect the first one to the White House.
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class='item'>
-              <table>
-                <tr valign='middle'>
-                  <td>
-                    This comes with enormous gains for women and society as a whole.
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class='item'>
-              <table>
-                <tr valign='middle'>
-                  <td>
-                    Frame this moment in history and share why
-                    <b>#myvotematters</b>
-                    with your friends &amp; family.
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <a class='carousel-control left' data-slide='prev' href='#carousel'>
-            <table>
-              <tr valign='middle'>
-                <td>
-                  <span>‹</span>
-                </td>
-              </tr>
-            </table>
-          </a>
-          <a class='carousel-control right' data-slide='next' href='#carousel'>
-            <table>
-              <tr valign='middle'>
-                <td>
-                  <span>›</span>
-                </td>
-              </tr>
-            </table>
-          </a>
-        </div>
-      </div>
-    </footer>
-    <footer id='devprogress-footer'>
-      <div class='container-fluid'>
-        <table>
-          <tr valign='middle'>
-            <td>
-              Built by
-              <a href='https://devprogress.us'>DevProgress</a>.
-              <a href='https://www.gnu.org/licenses/agpl-3.0.en.html'>AGPLv3</a>.
-              <a href='https://www.iwillvote.com/home/'>Commit to vote</a>.
-            </td>
-          </tr>
-        </table>
-      </div>
-    </footer>
   </body>
 </html>

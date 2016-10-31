@@ -30,55 +30,52 @@
         ga('send', 'pageview');
 
 
-  %body.bgblue
-    .container-fluid
-      .row#home-header
+  %body.bgblue.fgwhite
+    .container-fluid#home-header#header
+      .row
         .span-12
-          #header.bgblue.fgwhite
-            %h1 My Vote Matters.
-            %h3 Help Make History.
-            %span#link
-              %a{:href => "/timeline/"} Learn More
-              %img{:src => "img/logo.png?v2"}/
-    .container-fluid
-      .row#photos
+          %h1 My Vote Matters.
+          %h3 Help Make History.
+          %span#link
+            %a{:href => "/timeline/"} Learn More
+            %img{:src => "img/logo.png?v2"}/
+    .container-fluid#photos
+      .row
         .span-12
-      .row#main
-        .span-12
-      .container-fluid
+    .container-fluid#main
+      .container-fluid#camera-popup
         .row
-          .span-12
-            .container#camera-popup
-              .col-md-6.col-md-offset-3
-                .row#camera-box
-                  .span-12#video-wrapper.bgblue.no-display
-                    %video#video.no-display Video stream not available.
-                    %canvas#canvas
-                    #camerabutton-wrapper
-                      %button#camerabutton.btn.btn-default{:type => "button"} Start camera
-                  %span#controls
-                    .input-wrapper.no-display
-                      %input.input-message{:name => "message", :placeholder => "#myvotematters because...", :type => "text"}/
-                    #streaming.no-display
-                      %button#startbutton.btn.btn-danger{:type => "button"}
-                        %span.emoji 📷
-                        %span.text Take photo
-                    %span#share-photo.no-display
-                      .button-wrapper
-                        %a.twitter-share-button
-                          %img{:src => "img/twitter.png"}/
-                        %a.fb-share-button
-                          %img{:src => "img/facebook.png"}/
-                        %a.download-button
-                          %img{:src => "img/download.png"}/
-                        %a.cancel-button
-                          %img{:src => "img/error.png"}/
-                    .result.no-display
-                      %span.result-text
-                      %a.cancel-button{:href => "#"}
-                        Reset.
-    .row
-      .carousel-footer.fgwhite.bgblue
+          .col-md-6.col-md-offset-3
+            .container-fluid#camera-box
+              .row
+                .span-12#video-wrapper.bgblue.no-display
+                  %video#video.no-display Video stream not available.
+                  %canvas#canvas
+                  #camerabutton-wrapper
+                    %button#camerabutton.btn.btn-default{:type => "button"} Start camera
+                %span#controls
+                  .input-wrapper.no-display
+                    %input.input-message{:name => "message", :placeholder => "#myvotematters because...", :type => "text"}/
+                  #streaming.no-display
+                    %button#startbutton.btn.btn-danger{:type => "button"}
+                      %span.emoji 📷
+                      %span.text Take photo
+                  %span#share-photo.no-display
+                    .button-wrapper
+                      %a.twitter-share-button
+                        %img{:src => "img/twitter.png"}/
+                      %a.fb-share-button
+                        %img{:src => "img/facebook.png"}/
+                      %a.download-button
+                        %img{:src => "img/download.png"}/
+                      %a.cancel-button
+                        %img{:src => "img/error.png"}/
+                  .result.no-display
+                    %span.result-text
+                    %a.cancel-button{:href => "#"}
+                      Reset.
+    %footer.carousel-footer
+      .container-fluid
         #carousel.carousel.slide{"data-interval" => "5000", "data-ride" => "carousel"}
           .carousel-inner{:role => "listbox"}
             #longest.item.active
@@ -109,13 +106,14 @@
                 %td
                   %span ›
     %footer#devprogress-footer
-      %table
-        %tr{:valign => "middle"}
-          %td
-            Built by
-            = succeed "." do
-              %a{:href => "https://devprogress.us"} DevProgress
-            = succeed "." do
-              %a{:href => "https://www.gnu.org/licenses/agpl-3.0.en.html"} AGPLv3
-            = succeed "." do
-              %a{:href => "https://www.iwillvote.com/home/"} Commit to vote
+      .container-fluid
+        %table
+          %tr{:valign => "middle"}
+            %td
+              Built by
+              = succeed "." do
+                %a{:href => "https://devprogress.us"} DevProgress
+              = succeed "." do
+                %a{:href => "https://www.gnu.org/licenses/agpl-3.0.en.html"} AGPLv3
+              = succeed "." do
+                %a{:href => "https://www.iwillvote.com/home/"} Commit to vote

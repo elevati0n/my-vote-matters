@@ -40,13 +40,27 @@
 .bgwhite
   background-color: #ffffff
 /* General
+
+// $brand-success:         #5cb85c
+
+// $brand-warning:         #f0ad4e
+$brand-danger:          #ff3333
+
+$brand-primary:         #0057b8
+$brand-info:            #0066cc
+
+
+
 body
   font: 20px Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif
 /* Header
 #header
-  position: fixed
+  //@include shadow-16dp()
+  margin-left: 0px
+  margin-top: 0px
+  padding-left: 15px
+  position: relative
   width: 100%
-  padding: 0.4em
   h1
     display: inline
 h3, h4
@@ -96,21 +110,33 @@ p
   text-align: right
 .align-center
   text-align: center
+
+
+
+#main-container
+  padding-left: 0
+  padding-right: 0
+  //margin-left: 0
+  //margin-right: 0
+  //margin-top: 0
+  //margin-bottom: 0
+
 #main
-  margin-left: -15px
-  margin-right: -15px
+  //padding-left: -15px
+  //padding-right: -15px
   width: 100%
-  padding-top: .9em
-  overflow: hidden
-  z-index: 5
-#photos
+  //min-width: 350px
+  padding-top: 5.5em
+  overflow: visible
   position: relative
-  top: 15%
-  height: 68%
-  overflow: hidden
-  z-index: 2
+#photos
+  z-index: -10
+  position: fixed
+  overflow-x: inherit
+  overflow-y: visible
+  padding-top: 11em
   > div
-    position: fixed
+    position: relative
     width: calc((245px + 5px * 2) * 4)
     /* use #photos img width here
     height: calc((236px + 5px * 2) * 2)
@@ -120,6 +146,7 @@ p
     transform: translate(-50%, -50%)
     display: flex
     flex-wrap: wrap
+    background: #3f51b5
   canvas
     @extend .card
     @include shadow-8dp()
@@ -130,12 +157,12 @@ p
     display: block
     width: 245px
     height: 236px
+    background: #3f51b5
 /* Camera
 #canvas
   @include focus-shadow()
   @include shadow-24dp()
   margin: 0 auto
-  z-index: 3
 #camera
   text-align: center
   width: 100%
@@ -145,12 +172,11 @@ p
 #video-wrapper
   @extend .jumbotron-info
   @include focus-shadow()
-  @include shadow-24dp()
+  @include shadow-16dp()
   position: relative
   text-align: center
   margin: 0 auto
   border-radius: 10px
-  z-index: 24
   &.camera-failure
     width: 300px
     height: 300px
@@ -163,7 +189,6 @@ p
     font-size: 3.5vh
 /* Camera Buttons / Input
 #camerabutton-wrapper
-  z-index: 3
   position: absolute
   top: 35%
   width: 100%
@@ -187,23 +212,29 @@ p
     font-size: 24pt
     margin-right: 0.25em
 .input-wrapper
+  @include shadow-24dp
   text-align: center
   margin: 1em auto
   font-size: 14pt
   text-decoration-color: black
 .input-message
+  @include shadow-24dp
   border: 2px solid #eee
   border-radius: 5px
-  height: 35px
   text-indent: 10px
   color: black
   @include resizable(vertical)
 .result
+  @extend .jumbotron-info
+  @include shadow-24dp
+  overflow: visible
   text-align: center
-  background-color: white
   padding: 0.3em
   width: 50%
   margin: 0 auto
+  a
+    text-decoration: underline
+
   .cancel-button
     @extend .btn-raised
     color: #c9302c
@@ -223,9 +254,12 @@ p
 
 /* Carousel
 .carousel-footer
-  @extend .card-footer
-  z-index: -2
-  position: fixed
+  position: relative
+  padding-top: 5em
+
+#carousel
+  @extend .well-info
+  position: relative
 //  width: 100%
 //  text-align: center
 //.carousel-inner
@@ -247,12 +281,60 @@ p
     width: 100%
 /* Footer
 #devprogress-footer
-  @extend .card-footer
-  @extend .well-lg
-  z-index: -2
+  background-color: #ccc
+  position: relative
+  width: 100%
+  table
+    height: 100%
+    margin: 0 auto
+.carousel-footer
+  //bottom: 5%
+  //height: 14%
+  width: 100%
+  text-align: center
+  margin: 0
+  position: relative
+
+//padding-right: -15px
+  //padding-bottom: -15px
+
+
+/* Carousel
+#carousel
+  height: 100%
+  position: relative
+  padding-bottom: 5em
+
+.carousel-inner
+  height: 100%
+  margin: 0 auto
+
+#carousel .item
+  height: 100%
+  width: 100%
+  margin: 0 auto
+  padding-left: 2em
+  padding-right: 2em
+  text-align: center
+  table
+    height: 100%
+    margin: 0 auto
+
+.carousel-control
+  table
+    height: 100%
+    width: 100%
+
+/* Footer
+
+#devprogress-footer
   background-color: #ccc
   position: fixed
+  bottom: 0
+  //height: 5em
   width: 100%
+  margin: 0
+  padding: 10px
   table
     height: 100%
     margin: 0 auto

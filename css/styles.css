@@ -13550,58 +13550,60 @@ p {
 /* line 260, ../sass/enhancements.sass */
 #carousel {
   position: relative;
+  padding-bottom: 3em;
 }
 
-/* line 275, ../sass/enhancements.sass */
+/* line 276, ../sass/enhancements.sass */
 .carousel-control {
   font-size: xx-large;
 }
-/* line 276, ../sass/enhancements.sass */
+/* line 277, ../sass/enhancements.sass */
 .carousel-control.left, .carousel-control.right {
   opacity: 0.02;
 }
-/* line 279, ../sass/enhancements.sass */
+/* line 280, ../sass/enhancements.sass */
 .carousel-control table {
   height: 100%;
   width: 100%;
 }
 
 /* Footer */
-/* line 283, ../sass/enhancements.sass */
+/* line 284, ../sass/enhancements.sass */
 #devprogress-footer {
   background-color: #ccc;
   position: relative;
   width: 100%;
 }
-/* line 287, ../sass/enhancements.sass */
+/* line 288, ../sass/enhancements.sass */
 #devprogress-footer table {
   height: 100%;
   margin: 0 auto;
 }
 
-/* line 290, ../sass/enhancements.sass */
+/* line 291, ../sass/enhancements.sass */
 .carousel-footer {
   width: 100%;
   text-align: center;
   margin: 0;
   position: relative;
+  padding-top: 7em;
 }
 
 /* Carousel */
-/* line 303, ../sass/enhancements.sass */
+/* line 305, ../sass/enhancements.sass */
 #carousel {
   height: 100%;
   position: relative;
   padding-bottom: 5em;
 }
 
-/* line 308, ../sass/enhancements.sass */
+/* line 310, ../sass/enhancements.sass */
 .carousel-inner {
   height: 100%;
   margin: 0 auto;
 }
 
-/* line 312, ../sass/enhancements.sass */
+/* line 314, ../sass/enhancements.sass */
 #carousel .item {
   height: 100%;
   width: 100%;
@@ -13610,20 +13612,20 @@ p {
   padding-right: 2em;
   text-align: center;
 }
-/* line 319, ../sass/enhancements.sass */
+/* line 321, ../sass/enhancements.sass */
 #carousel .item table {
   height: 100%;
   margin: 0 auto;
 }
 
-/* line 324, ../sass/enhancements.sass */
+/* line 326, ../sass/enhancements.sass */
 .carousel-control table {
   height: 100%;
   width: 100%;
 }
 
 /* Footer */
-/* line 330, ../sass/enhancements.sass */
+/* line 332, ../sass/enhancements.sass */
 #devprogress-footer {
   background-color: #ccc;
   position: fixed;
@@ -13632,41 +13634,41 @@ p {
   margin: 0;
   padding: 10px;
 }
-/* line 338, ../sass/enhancements.sass */
+/* line 340, ../sass/enhancements.sass */
 #devprogress-footer table {
   height: 100%;
   margin: 0 auto;
 }
 
 /* Timeline */
-/* line 344, ../sass/enhancements.sass */
+/* line 346, ../sass/enhancements.sass */
 .timeline-block {
   font-size: 16px;
   color: #ffffff;
 }
-/* line 347, ../sass/enhancements.sass */
+/* line 349, ../sass/enhancements.sass */
 .timeline-block.top-row, .timeline-block#header {
   padding: 20vh 0 2em 0;
 }
-/* line 349, ../sass/enhancements.sass */
+/* line 351, ../sass/enhancements.sass */
 .timeline-block.bottom-row {
   padding: 5vh 0 2em 0;
 }
 
-/* line 351, ../sass/enhancements.sass */
+/* line 353, ../sass/enhancements.sass */
 .timeline-article {
   padding-bottom: 1em;
 }
 
-/* line 354, ../sass/enhancements.sass */
+/* line 356, ../sass/enhancements.sass */
 .timeline-block p {
   line-height: 1.45em;
 }
-/* line 356, ../sass/enhancements.sass */
+/* line 358, ../sass/enhancements.sass */
 .timeline-block h2, .timeline-block h3 {
   font-weight: 700;
 }
-/* line 358, ../sass/enhancements.sass */
+/* line 360, ../sass/enhancements.sass */
 .timeline-block h2 {
   display: inline-block;
   padding: 0.5em;
@@ -13674,13 +13676,13 @@ p {
   color: #ffffff;
   background-color: #ff3333;
 }
-/* line 364, ../sass/enhancements.sass */
+/* line 366, ../sass/enhancements.sass */
 .timeline-block h3 {
   color: #ff3333;
   font-size: 20px;
 }
 
-/* line 367, ../sass/enhancements.sass */
+/* line 369, ../sass/enhancements.sass */
 ul.timeline {
   /*display: flex; */
   white-space: nowrap;
@@ -13690,7 +13692,7 @@ ul.timeline {
   margin: 0;
   font-size: 14px;
 }
-/* line 375, ../sass/enhancements.sass */
+/* line 377, ../sass/enhancements.sass */
 ul.timeline li {
   display: inline-block;
   position: relative;
@@ -13699,7 +13701,7 @@ ul.timeline li {
   white-space: normal;
   vertical-align: bottom;
 }
-/* line 382, ../sass/enhancements.sass */
+/* line 384, ../sass/enhancements.sass */
 ul.timeline li:after {
   content: "";
   display: block;
@@ -13712,7 +13714,7 @@ ul.timeline li:after {
   bottom: 0;
   margin-left: -0.5em;
 }
-/* line 393, ../sass/enhancements.sass */
+/* line 395, ../sass/enhancements.sass */
 ul.timeline li strong {
   display: block;
   position: absolute;
@@ -13721,7 +13723,7 @@ ul.timeline li strong {
   right: 0;
   bottom: -20px;
 }
-/* line 400, ../sass/enhancements.sass */
+/* line 402, ../sass/enhancements.sass */
 ul.timeline li .headline {
   display: block;
   transform: rotate(-25deg);
@@ -13732,7 +13734,7 @@ ul.timeline li .headline {
   width: 220px;
   padding: 0.2em;
 }
-/* line 409, ../sass/enhancements.sass */
+/* line 411, ../sass/enhancements.sass */
 ul.timeline li .details {
   display: block;
   position: absolute;
@@ -13746,7 +13748,7 @@ ul.timeline li .details {
   right: -25px;
   bottom: 8px;
 }
-/* line 421, ../sass/enhancements.sass */
+/* line 423, ../sass/enhancements.sass */
 ul.timeline li:hover .details, ul.timeline li:active .details {
   opacity: 1;
 }

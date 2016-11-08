@@ -1,0 +1,43 @@
+@import "bootstrap"
+body
+  background-color: #0066cc
+#header
+  background-color: #0066cc
+  @extend .navbar
+  @extend .navbar-header
+  @extend .navbar-fixed-top
+  @extend .navbar-text
+  @extend .navbar-nav
+  margin: 0 0 0 0
+  .h1
+    @extend .navbar-brand
+    font-style: normal
+  .h3
+    font-style: normal
+  .span
+    @extend .navbar-link
+    %a
+      font-style: normal
+    .img
+      font-style: normal
+.container-fluid
+  #photos
+    @include make-row()
+    position: inherit
+    z-index: -110
+#main
+  @include make-row()
+  z-index: 1100
+  overflow: visible
+  #wrapper
+    @include center-block()
+.carousel-footer
+  @extend .navbar
+  @extend .navbar-fixed-bottom
+  position: fixed
+  #carousel.carousel.slide
+    @include make-row()
+
+#devprogress-footer
+  @extend .navbar-fixed-bottom
+  position: fixed
